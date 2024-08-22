@@ -1,37 +1,43 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import ScreenBtn from "@/components/common/header/screenBtn/ScreenBtn";
+import { icons } from "@/constants";
+import { useFonts } from "expo-font";
+import { Stack } from "expo-router";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+const Layout = () => {
+     const [fontLoaded] = useFonts({
+          PoppinsBold: require("../assets/fonts/Poppins-Bold.ttf"),
+          PoppinsRegular: require("../assets/fonts/Poppins-Regular.ttf"),
+          PoppinsMedium: require("../assets/fonts/Poppins-Medium.ttf"),
+          IrishRegular: require("../assets/fonts/IrishGrover-Regular.ttf"),
+     });
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+     if (!fontLoaded) {
+          return null;
+     }
+     return (
+          <Stack>
+               <Stack.Screen
+                    name="(tabs)"
+                    options={{
+                         headerTitle: "",
+                         headerLeft: () => (
+                              <ScreenBtn
+                                   handlePress={() => {}}
+                                   dimension="80%"
+                                   iconUrl={icons.menu}
+                              />
+                         ),
+                         headerRight: () => (
+                              <ScreenBtn
+                                   iconUrl={icons.profile}
+                                   handlePress={() => {}}
+                                   dimension="80%"
+                              />
+                         ),
+                    }}
+               />
+          </Stack>
+     );
+};
 
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
-  );
-}
+export default Layout;
