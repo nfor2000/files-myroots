@@ -1,5 +1,6 @@
+import Logo from "@/components/common/header/Logo";
 import ScreenBtn from "@/components/common/header/screenBtn/ScreenBtn";
-import { icons } from "@/constants";
+import { COLORS, icons } from "@/constants";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 
@@ -27,15 +28,13 @@ const Layout = () => {
                                    iconUrl={icons.menu}
                               />
                          ),
-                         headerRight: () => (
-                              <ScreenBtn
-                                   iconUrl={icons.profile}
-                                   handlePress={() => {}}
-                                   dimension="80%"
-                              />
-                         ),
+                         headerRight: () => <Logo color={COLORS.secondary} />,
                     }}
                />
+               <Stack.Screen name="auth" options={{ headerShown: false }} />
+               <Stack.Screen name="pages" options={{ headerShown: false }} />
+               <Stack.Screen name="+not-found" />
+               <Stack.Screen name="index" options={{ headerShown: false }} />
           </Stack>
      );
 };

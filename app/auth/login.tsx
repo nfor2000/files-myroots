@@ -1,11 +1,9 @@
 import PasswordInputField from "@/components/common/auth/PasswordInputField";
 import TextInputField from "@/components/common/auth/TextInputField";
 import Button from "@/components/common/buttons/Button";
-import Logo from "@/components/common/header/Logo";
-import ScreenBtn from "@/components/common/header/screenBtn/ScreenBtn";
 import { COLORS, FONTS, icons, SIZES } from "@/constants";
 import styles from "@/styles";
-import { Link, router, Stack } from "expo-router";
+import { Link } from "expo-router";
 import React, { useState } from "react";
 import {
      SafeAreaView,
@@ -34,23 +32,8 @@ const login = () => {
 
      return (
           <>
-               <Stack.Screen
-                    options={{
-                         headerTitle: "",
-                         headerLeft: () => (
-                              <ScreenBtn
-                                   dimension="80%"
-                                   handlePress={() => router.back()}
-                                   iconUrl={icons.back}
-                              />
-                         ),
-                         headerRight: () => <Logo />,
-                         headerShadowVisible: false,
-                    }}
-               />
                <SafeAreaView
                     style={{
-                         display: "flex",
                          flex: 1,
                          backgroundColor: COLORS.white,
                          justifyContent: "center",
@@ -137,7 +120,7 @@ const login = () => {
                                         Can't login?
                                    </Text>
                                    <Link
-                                        href="auth/register"
+                                        href={"/auth/register"}
                                         style={{
                                              color: COLORS.primary,
                                              fontFamily: FONTS.poppins.medium,

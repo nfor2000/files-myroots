@@ -34,7 +34,7 @@ const PasswordInputField = ({
                     secureTextEntry={showText}
                     placeholder="Enter password"
                     style={{
-                         fontSize: SIZES.large,
+                         fontSize: SIZES.medium,
                          flex: 1,
                          color: COLORS.secondary,
                          fontFamily: FONTS.poppins.regular,

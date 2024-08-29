@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
      },
      heading: {
           fontFamily: FONTS.irishGrover.regular,
-          fontSize: SIZES.xLarge,
+          fontSize: SIZES.large,
      },
      logo: {
           fontFamily: FONTS.irishGrover.regular,

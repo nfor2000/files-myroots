@@ -34,130 +34,113 @@ const Register = () => {
      };
 
      return (
-          <>
-               <Stack.Screen
-                    options={{
-                         headerTitle: "",
-                         headerLeft: () => (
-                              <ScreenBtn
-                                   dimension="80%"
-                                   handlePress={() => router.back()}
-                                   iconUrl={icons.back}
+          <SafeAreaView
+               style={{
+                    display: "flex",
+                    flex: 1,
+                    backgroundColor: COLORS.white,
+                    justifyContent: "center",
+               }}
+          >
+               <ScrollView>
+                    <View
+                         style={{
+                              padding: SIZES.xLarge,
+                              gap: 20,
+                              alignItems: "center",
+                              justifyContent: "center",
+                         }}
+                    >
+                         <Text
+                              style={{
+                                   ...styles.heading,
+                                   color: COLORS.secondary,
+                              }}
+                         >
+                              {" "}
+                              Register
+                         </Text>
+                         <View style={{ gap: 10 }}>
+                              <TextInputField
+                                   placeholder="Enter name"
+                                   value={userData.name}
+                                   onChangeText={handleChange}
+                                   field="name"
                               />
-                         ),
-                         headerRight: () => <Logo />,
-                         headerShadowVisible: false,
-                    }}
-               />
-               <SafeAreaView
-                    style={{
-                         display: "flex",
-                         flex: 1,
-                         backgroundColor: COLORS.white,
-                         justifyContent: "center",
-                    }}
-               >
-                    <ScrollView>
+                              <TextInputField
+                                   placeholder="Enter email"
+                                   value={userData.email}
+                                   onChangeText={handleChange}
+                                   field="email"
+                              />
+                              <PasswordInputField
+                                   placeholder="Enter password"
+                                   value={userData.password}
+                                   onChangeText={handleChange}
+                                   field="password"
+                              />
+                         </View>
+                         <TouchableOpacity
+                              style={{
+                                   backgroundColor: COLORS.primary,
+                                   width: 200,
+                                   paddingHorizontal: 20,
+                                   paddingVertical: 10,
+                                   display: "flex",
+                                   justifyContent: "center",
+                                   alignItems: "center",
+                                   borderRadius: 5,
+                              }}
+                              onPress={() => {}}
+                         >
+                              <Text
+                                   style={{
+                                        fontSize: SIZES.xLarge,
+                                        color: COLORS.white,
+                                        fontFamily: FONTS.irishGrover.regular,
+                                   }}
+                              >
+                                   Register
+                              </Text>
+                         </TouchableOpacity>
+
+                         <Button
+                              text={"Continue with"}
+                              iconUrl={icons.google}
+                         />
+                         <Button
+                              text={"Continue with"}
+                              iconUrl={icons.facebook}
+                         />
                          <View
                               style={{
-                                   padding: SIZES.xLarge,
-                                   gap: 20,
+                                   flexDirection: "row",
                                    alignItems: "center",
                                    justifyContent: "center",
+                                   gap: 5,
                               }}
                          >
                               <Text
                                    style={{
-                                        ...styles.heading,
                                         color: COLORS.secondary,
+                                        fontFamily: FONTS.poppins.regular,
                                    }}
                               >
-                                   {" "}
-                                   Register
+                                   Already have an account?
                               </Text>
-                              <View style={{ gap: 10 }}>
-                                   <TextInputField
-                                        placeholder="Enter name"
-                                        value={userData.name}
-                                        onChangeText={handleChange}
-                                        field="name"
-                                   />
-                                   <TextInputField
-                                        placeholder="Enter email"
-                                        value={userData.email}
-                                        onChangeText={handleChange}
-                                        field="email"
-                                   />
-                                   <PasswordInputField
-                                        placeholder="Enter password"
-                                        value={userData.password}
-                                        onChangeText={handleChange}
-                                        field="password"
-                                   />
-                              </View>
-                              <TouchableOpacity
+                              <Link
+                                   href={"/auth/login"}
                                    style={{
-                                        backgroundColor: COLORS.primary,
-                                        width: 200,
-                                        paddingHorizontal: 20,
-                                        paddingVertical: 10,
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        borderRadius: 5,
-                                   }}
-                                   onPress={() => {}}
-                              >
-                                   <Text
-                                        style={{
-                                             fontSize: SIZES.xLarge,
-                                             color: COLORS.white,
-                                             fontFamily:
-                                                  FONTS.irishGrover.regular,
-                                        }}
-                                   >
-                                        Register
-                                   </Text>
-                              </TouchableOpacity>
-
-                              <Button
-                                   text={"Continue with"}
-                                   iconUrl={icons.google}
-                              />
-                              <Button
-                                   text={"Continue with"}
-                                   iconUrl={icons.facebook}
-                              />
-                              <View
-                                   style={{
-                                        flexDirection: "row",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        gap: 5,
+                                        color: COLORS.primary,
+                                        fontFamily: FONTS.poppins.medium,
                                    }}
                               >
-                                   <Text
-                                        style={{
-                                             color: COLORS.secondary,
-                                             fontFamily: FONTS.poppins.regular,
-                                        }}
-                                   >
-                                        Already have an account?
-                                   </Text>
-                                   <Link
-                                        href="auth/login"
-                                        style={{
-                                             color: COLORS.primary,
-                                             fontFamily: FONTS.poppins.medium,
-                                        }}
-                                   >
-                                        Login!
-                                   </Link>
-                              </View>
+                                   Login!
+                              </Link>
                          </View>
-                    </ScrollView>
-               </SafeAreaView>
-          </>
+                    </View>
+               </ScrollView>
+          </SafeAreaView>
      );
 };
 

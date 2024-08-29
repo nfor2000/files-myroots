@@ -24,7 +24,7 @@ const Button = ({ text, iconUrl }: props) => {
           >
                <Text
                     style={{
-                         fontSize: SIZES.xLarge,
+                         fontSize: SIZES.large,
                          color: COLORS.primary,
                          fontFamily: FONTS.irishGrover.regular,
                     }}

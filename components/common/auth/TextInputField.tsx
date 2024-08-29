@@ -27,7 +27,7 @@ const TextInputField = ({ placeholder, value, onChangeText, field }: props) => {
                <TextInput
                     placeholder={placeholder ?? "Enter ..."}
                     style={{
-                         fontSize: SIZES.large,
+                         fontSize: SIZES.medium,
                          flex: 1,
                          color: COLORS.secondary,
                          fontFamily: FONTS.poppins.regular,

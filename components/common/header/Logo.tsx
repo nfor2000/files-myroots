@@ -3,12 +3,12 @@ import styles from "@/styles";
 import React from "react";
 import { Text } from "react-native";
 
-const Logo = () => {
+const Logo = ({ color }: { color: string }) => {
      return (
           <Text
                style={{
                     ...styles.logo,
-                    color: COLORS.secondary,
+                    color: color,
                }}
           >
                myRoots

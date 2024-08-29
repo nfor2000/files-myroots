@@ -1,0 +1,121 @@
+{
+     "Overview": {
+          "AlternativeNames": [
+               "Bansaw",
+               "Banso",
+               "Banso’",
+               "Lamnsok",
+               "Lamso",
+               "Nsaw",
+               "Nsho’",
+               "Nso",
+               "Nso’",
+               "Nsɔ",
+               "Panso"
+          ],
+          "EthnicGroup": {
+               "Name": "Nso",
+               "Region": "Northwest Region, Cameroon",
+               "LargerGroup": "Tikar"
+          },
+          "Origin": {
+               "HistoricalContext": "Tikar Kingdom established in the 17th century",
+               "Chieftaincy": "Nso fondom"
+          },
+          "CulturalHeritage": {
+               "Leadership": {
+                    "Position": "Fon",
+                    "Role": "Custodian of Nso culture"
+               },
+               "Economy": {
+                    "Traditional": "Farming (maize, millet, beans, yams)",
+                    "Modern": ["Trade", "Education"]
+               },
+               "SocialStructure": {
+                    "Organization": "Age grades and secret societies",
+                    "Kinship": "Matrilineal"
+               },
+               "Arts": {
+                    "Craftsmanship": [
+                         "Wood carvings",
+                         "Pottery",
+                         "Weaving",
+                         "Beadwork"
+                    ]
+               },
+               "Religion": {
+                    "Beliefs": ["Traditional practices", "Christianity"]
+               }
+          }
+     },
+     "TraditionalAttire": {
+          "Elements": {
+               "Toghu": {
+                    "Description": "Handwoven fabric with geometric patterns",
+                    "Usage": "Garments like wrappers, tunics, headscarves"
+               },
+               "Wrapper": {
+                    "LocalName": "Tukwi",
+                    "Description": "Rectangular fabric worn around the waist"
+               },
+               "Blouse": {
+                    "LocalNames": ["Kibuh", "Kishie"],
+                    "Description": "Loose-fitting blouse with embroidery"
+               },
+               "Headgear": {
+                    "Men": "Tukumbeng cap",
+                    "Women": "Headscarves or headwraps"
+               },
+               "Accessories": {
+                    "Description": "Necklaces, bracelets, anklets made from beads or cowrie shells"
+               }
+          }
+     },
+     "TraditionalCuisine": {
+          "StapleFood": "Corn fufu with huckleberry"
+     },
+     "Festivals": {
+          "CulturalFestival": {
+               "Name": "Ngonso Cultural Festival",
+               "Purpose": "Exhibit cultural heritage",
+               "Activities": ["Arts exhibition", "Juju show"]
+          }
+     },
+     "Language": {
+          "WritingSystem": {
+               "History": "Developed in the 1940s",
+               "CurrentSystem": "Based on Latin alphabet and AGLC"
+          },
+          "Pronunciation": {
+               "HighTone": "Indicated by acute accent (á)",
+               "LowTone": "Indicated by grave accent (à)"
+          },
+          "SampleText": {
+               "Nso": "Á dzə̀ə́ wir dzə̀m réŋréŋ fó ghvəm wùn à fó ghày, á yo’ dzə̀ə́ wir msòŋ ji kwàn.",
+               "Translation": "All human beings are born free and equal in dignity and rights."
+          }
+     },
+     "ArtsAndCrafts": {
+          "Institution": {
+               "Name": "Mus’Art Gallery",
+               "Established": "December 18, 1996",
+               "Focus": "Promoting Nso traditional artistry",
+               "Collections": "Over 400 objects"
+          },
+          "Challenges": {
+               "Loss": "Colonial appropriation of art",
+               "Preservation": "Need for community education on heritage"
+          },
+          "Goals": {
+               "Revival": "Traditional wood sculpturing and crafts",
+               "EconomicImpact": "Job creation and cultural identity"
+          }
+     },
+     "Links": {
+          "YouTube": [
+               "https://youtu.be/gu1Ha6rLuXQ?si=-SoNzEcPvx5zrz4O",
+               "https://youtu.be/Wce3ZECVgFk?si=iukipKoNzzMNCQUS"
+          ],
+          "Bible": "https://scriptureearth.org/00i-Scripture_Index.php?idx=829&language=Kenyang&iso_code=ken"
+     }
+}
