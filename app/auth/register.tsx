@@ -5,9 +5,11 @@ import Logo from "@/components/common/header/Logo";
 import ScreenBtn from "@/components/common/header/screenBtn/ScreenBtn";
 import { COLORS, FONTS, icons, SIZES } from "@/constants";
 import styles from "@/styles";
+import axiosInstance from "@/utils/axiosInstance";
 import { Link, router, Stack } from "expo-router";
 import React, { useState } from "react";
 import {
+     Alert,
      SafeAreaView,
      ScrollView,
      Text,
@@ -27,10 +29,23 @@ const Register = () => {
      });
 
      const handleChange = (key: string, value: string) => {
-          console.log(`updatin field ${key} with ${value} `);
           setUserData((prev) => {
                return { ...prev, [key]: value };
           });
+     };
+
+     const handlSubmit = async () => {
+          try {
+               const response = await axiosInstance.post(
+                    "user/register",
+                    userData
+               );
+               Alert.alert(response.data.msg);
+               router.navigate("/auth/login");
+          } catch (error: any) {
+               console.log(error);
+               Alert.alert(error.response.data.msg);
+          }
      };
 
      return (
@@ -91,7 +106,7 @@ const Register = () => {
                                    alignItems: "center",
                                    borderRadius: 5,
                               }}
-                              onPress={() => {}}
+                              onPress={handlSubmit}
                          >
                               <Text
                                    style={{

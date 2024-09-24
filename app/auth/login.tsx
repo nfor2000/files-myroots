@@ -3,9 +3,11 @@ import TextInputField from "@/components/common/auth/TextInputField";
 import Button from "@/components/common/buttons/Button";
 import { COLORS, FONTS, icons, SIZES } from "@/constants";
 import styles from "@/styles";
-import { Link } from "expo-router";
+import axiosInstance from "@/utils/axiosInstance";
+import { Link, router } from "expo-router";
 import React, { useState } from "react";
 import {
+     Alert,
      SafeAreaView,
      ScrollView,
      Text,
@@ -14,7 +16,6 @@ import {
 } from "react-native";
 type User = {
      email: string;
-     name?: string;
      password: string;
 };
 const login = () => {
@@ -24,10 +25,23 @@ const login = () => {
      });
 
      const handleChange = (key: string, value: string) => {
-          console.log(`updatin field ${key} with ${value} `);
           setUserData((prev) => {
                return { ...prev, [key]: value };
           });
+     };
+
+     const handlSubmit = async () => {
+          try {
+               const response = await axiosInstance.post(
+                    "user/login",
+                    userData
+               );
+               Alert.alert(response.data.msg);
+               router.navigate("/(tabs)/explore");
+          } catch (error: any) {
+               console.log(error);
+               Alert.alert(error.response.data.msg);
+          }
      };
 
      return (
@@ -81,7 +95,7 @@ const login = () => {
                                         alignItems: "center",
                                         borderRadius: 5,
                                    }}
-                                   onPress={() => {}}
+                                   onPress={handlSubmit}
                               >
                                    <Text
                                         style={{

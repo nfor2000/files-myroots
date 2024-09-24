@@ -1,14 +1,6 @@
 import { COLORS, FONTS, images, SIZES } from "@/constants";
 import React from "react";
-import {
-     SafeAreaView,
-     View,
-     ScrollView,
-     Text,
-     Image,
-     TextInput,
-     Pressable,
-} from "react-native";
+import { SafeAreaView, View, ScrollView, Text, Image } from "react-native";
 const ActivitiesPage = () => {
      return (
           <SafeAreaView

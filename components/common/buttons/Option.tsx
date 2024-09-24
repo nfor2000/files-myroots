@@ -34,6 +34,10 @@ const Option = ({
                          ? isCorrectAnswer
                               ? "green"
                               : "tomato"
+                         : !isSelected &&
+                           isCorrectAnswer &&
+                           selectedIndex != null
+                         ? "green"
                          : COLORS.secondary,
                     borderRadius: 5,
                }}
@@ -60,6 +64,15 @@ const Option = ({
                               color={isCorrectAnswer ? "green" : "tomato"}
                          />
                     )}
+                    {!isSelected &&
+                         selectedIndex != null &&
+                         isCorrectAnswer && (
+                              <FontAwesome
+                                   name={"check"}
+                                   size={14}
+                                   color={"green"}
+                              />
+                         )}
                </View>
                <Text style={{ ...styles.textSmall, color: COLORS.secondary }}>
                     {text}

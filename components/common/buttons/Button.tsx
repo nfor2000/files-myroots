@@ -38,9 +38,9 @@ const Button = ({ text, iconUrl }: props) => {
                     }}
                >
                     <Image
+                         source={iconUrl}
                          style={{ width: 40, height: 40 }}
                          resizeMode="cover"
-                         source={iconUrl}
                     />
                </View>
           </TouchableOpacity>
